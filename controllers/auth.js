@@ -11,9 +11,9 @@ module.exports = {
             if(existingUser) 
                 return res.status(409).send({message: 'Email is already registered'});
             
-             var user = new User(req.body);
+            var user = new User(req.body);
 
-            user.save(function (err, result ) {
+            user.save(function (err, result) {
                 if(err) {
                     res.status(500).send({
                         message: err.message
